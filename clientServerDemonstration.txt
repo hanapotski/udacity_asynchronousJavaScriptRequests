@@ -8,3 +8,5 @@ AJAX
 - allows request asynchronously
 - can happen in the background without blocking the rest of the page load
 
+Callback
+- call after getting the response
