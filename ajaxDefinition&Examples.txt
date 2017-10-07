@@ -1,0 +1,34 @@
+AJAX requests
+- asynchronous javascript and xml
+- allow for content retrieval and display without reloading the webpage
+
+asynchronous
+- request doesn't block other events from happening
+- page keeps on doing its thing and then only acts on the data when it gets returned by the server
+
+
+- ajax requests occus in a number of different ways and with varying levels of difficulty
+- API key, Oauth, no authentication
+
+Data: Ajax, Ajaj
+- XML <entry></entry>
+- JSON {property: data}
+- HTML<div></div>
+
+
+A little history
+JavaScript frameworks and Single Page Apps are the way to build today, but let's review where we've come from.
+
+late 90s, microsoft outlook team added XMLHTTP component to Internet Explorer > XMLHttpRequest
+- allowed browsers to make HTTP requests from JS and update the current page in place without fetching an entire page from the server
+
+AJAX
+- coined by Jesse James Garrett, 2005
+- technique of using XMLHTTPRequest to fetch data and then modify the current page
+- flickr, gmail, google maps
+
+
+Browser Inconsistencies
+- JavaScript libraries like jQuery and YUI emerged to reconcile the differences in incompatible browser implementations
+
+AJAX apps were great, but difficult for individual developers to write; as browsers kept changing, and people demanded apps on more devices, the code then became more and more complex and confusing. This challenge led to the rise of standard Javascript frameworks and libraries. JavaScript libraries arose to hide the complex browser differences, JavaScript frameworks made developing complex, powerful applications manageable.
