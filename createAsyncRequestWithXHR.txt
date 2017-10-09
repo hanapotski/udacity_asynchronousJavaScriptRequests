@@ -1,0 +1,4 @@
+Create An Async Request With XHR
+
+An XHR object is provided by JS environment and is used to make AJAX requests.
+
