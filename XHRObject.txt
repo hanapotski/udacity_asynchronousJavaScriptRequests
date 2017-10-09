@@ -1,0 +1,15 @@
+The XHR Object
+
+Just like how the document is provided by the JavaScript engine, the JavaScript engine also provides a way for us to make asynchronous HTTP requests. We do that with an XMLHttpRequest object. We can create these objects with the provided XMLHttpRequest constructor function.
+
+One of the best ways to learn is to get your hands dirty and try things out! So go to Unsplash, open up the developer tools, and run the following on the console:
+
+const asyncRequestObject = new XMLHttpRequest();
+Confusingly, the constructor function has "XML" in it, but it's not limited to only XML documents. Remember that the "AJAX" acronym used to stand for "Asynchronous JavaScript and XML". Since the main file format that was originally used for asynchronous data exchange were XML files, it's easy to see why the function is called XMLHttpRequest!
+
+XMLHttpRequests (commonly abbreviated as XHR or xhr) can be used to request any file type (e.g. plain text files, HTML files, JSON files, image files, etc.) or data from an API.
+Note: We'll be digging into the XMLHttpRequest object. We'll look at how to create it, what methods and properties need to be used, and how to actually send asynchronous requests. For even more info on using the XHR object to make async requests, check out these links:
+
+MDN's docs - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open
+WHATWG Spec - https://xhr.spec.whatwg.org/
+W3C Spec - https://www.w3.org/TR/XMLHttpRequest/
