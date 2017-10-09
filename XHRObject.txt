@@ -13,3 +13,7 @@ Note: We'll be digging into the XMLHttpRequest object. We'll look at how to crea
 MDN's docs - https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest/open
 WHATWG Spec - https://xhr.spec.whatwg.org/
 W3C Spec - https://www.w3.org/TR/XMLHttpRequest/
+
+const asyncRequestObject = new XMLHttpRequest();
+asyncRequestObject.open();
+asyncRequestObject.send();
