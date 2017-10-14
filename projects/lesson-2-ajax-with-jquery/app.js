@@ -1,6 +1,6 @@
 (function () {
     const form = document.querySelector('#search-form');
-    let searchField = document.querySelector('#search-keyword');
+    const searchField = document.querySelector('#search-keyword');
     const responseContainer = document.querySelector('#response-container');
     let searchedForText = 'baby tiger';
 
@@ -34,9 +34,9 @@
     }
     
     
-    function addArticles() {
+    function addArticles(data) {
       let htmlContent = '';
-      const data = JSON.parse(this.responseText);
+
       if (data.response && data.response.docs && data.response.docs.length > 1) {
         htmlContent = '<ul>' + data.response.docs.map(article => `<li class="article">
             <h2><a href="${article.web_url}">${article.headline.main}</a></h2>
@@ -46,13 +46,19 @@
       } else {
         htmlContent = '<div class="error-no-articles">No articles available</div>';
       }
+
       responseContainer.insertAdjacentHTML('beforeend', htmlContent);
     }
     
-    const articleRequest = new XMLHttpRequest();
-    articleRequest.onload = addArticles;
-    articleRequest.open('GET', `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=45bdb4ba4a21426983cf67c1e715bfaa`);
-    articleRequest.send();
+    // const articleRequest = new XMLHttpRequest();
+    // articleRequest.onload = addArticles;
+    // articleRequest.open('GET', `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=45bdb4ba4a21426983cf67c1e715bfaa`);
+    // articleRequest.send();
+    
+    $.ajax({
+        url: `http://api.nytimes.com/svc/search/v2/articlesearch.json?q=${searchedForText}&api-key=62441442c2604cc69e2a2c6f8b100ac4`
+    }).done(addArticles);
+
 
     
 })();
