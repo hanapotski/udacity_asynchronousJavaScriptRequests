@@ -3,3 +3,9 @@ https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints
 https://developers.google.com/web/tools/chrome-devtools/javascript/
 https://developers.google.com/web/tools/chrome-devtools/javascript/reference
 
+$.ajax() Uses XHR Recap
+jQuery's ajax method does a lot of things under the hood.
+
+creates a new XHR object each time it's called
+sets all of the XHR properties and methods
+sends the XHR request
