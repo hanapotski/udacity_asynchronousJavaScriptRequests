@@ -1,0 +1,35 @@
+If you recall from setting up an XHR object, the response was handled by a function. It's the same thing with the .ajax() method. We can chain on to .ajax() with a .done() method. We pass the .done() method a function that will run with the Ajax call is done!
+
+function handleResponse(data) {
+    console.log('the ajax request has finished!');
+    console.log(data);
+}
+
+$.ajax({
+    url: 'http://swapi.co/api/people/1/'
+}).done(handleResponse);
+
+const imgRequest = new XMLHttpRequest();
+imgRequest.onload = addImage;
+imgRequest.open('GET', `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`);
+imgRequest.setRequestHeader('Authorization', 'Client-ID <your-client-id-here>');
+imgRequest.send();
+
+--> to jquery
+$.ajax({
+    url: `https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`
+}).done(addImage);
+
+With the jQuery code:
+
+we do not need to create an XHR object
+instead of specifying that the request is a GET request, it defaults to that and we just provide the URL of the resource we're requesting
+instead of setting onload, we use the .done() method
+
+
+With the jQuery code:
+
+we do not need to create an XHR object
+instead of specifying that the request is a GET request, it defaults to that and we just provide the URL of the resource we're requesting
+instead of setting onload, we use the .done() method
+
