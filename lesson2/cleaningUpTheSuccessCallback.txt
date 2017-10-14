@@ -1,0 +1,25 @@
+function addImage() {
+    const data = JSON.parse(this.responseText);
+    const firstImage = data.results[0];
+
+    responseContainer.insertAdjacentHTML('afterbegin', `<figure>
+            <img src="${firstImage.urls.small}" alt="${searchedForText}">
+            <figcaption>${searchedForText} by ${firstImage.user.name}</figcaption>
+        </figure>`
+    );
+}
+We just need to change the first three lines:
+
+function addImage(images) {
+    const firstImage = images.results[0];
+
+    responseContainer.insertAdjacentHTML('afterbegin', `<figure>
+            <img src="${firstImage.urls.small}" alt="${searchedForText}">
+            <figcaption>${searchedForText} by ${firstImage.user.name}</figcaption>
+        </figure>`
+    );
+}
+What changed
+the function now has one parameter images
+this parameter has already been converted from JSON to a JavaScript object, so * the line that had JSON.parse() is no longer needed.
+the firstImage variable is set to the images.results first item
