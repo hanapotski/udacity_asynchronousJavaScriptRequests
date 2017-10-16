@@ -1,0 +1,9 @@
+What is Fetch
+Fetch is the new way to make network requests.
+
+As mentioned above, the new Fetch API utilizes Promises under the hood
+
+Fetch is a new API that was built to make requesting resources (primarily across a network) a whole lot easier. One thing that makes the new Fetch API a lot nicer than the old XHR way of doing things is that Fetch is promise-based!
+
+https://caniuse.com/#feat=fetch
+
