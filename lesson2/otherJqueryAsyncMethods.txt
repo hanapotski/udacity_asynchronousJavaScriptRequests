@@ -1,0 +1,10 @@
+jQuery has a number of other methods that can be used to make asynchronous calls. These methods are:
+
+.get()
+.getJSON()
+.getScript()
+.post()
+.load()
+
+These are called "convenience methods" because they provide a convenient interface and do some default configuration of the request before calling .ajax().
+
