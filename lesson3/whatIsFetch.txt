@@ -7,3 +7,45 @@ Fetch is a new API that was built to make requesting resources (primarily across
 
 https://caniuse.com/#feat=fetch
 
+fetch('<URL-to-the-resource-that-is-being-requested>');
+
+- a Fetch request is just the fetch() function and a string to the resource that's being requested.
+
+fetch('https://api.unsplash.com/search/photos?page=1&query=flowers');
+
+
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
+https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
+https://developer.mozilla.org/en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+
+
+
+fetch(https://api.unsplash.com/search/photos?page=1&query=${searchedForText}, { 
+     headers: { 
+         Authorization: 'Client-ID abc123' 
+    } 
+});
+
+
+const requestHeaders = new Headers(); 
+requestHeaders.append('Authorization', 'Client-ID abc123'); 
+fetch(https://api.unsplash.com/search/photos?page=1&query=${searchedForText}, { 
+     headers: requestHeaders 
+});
+
+
+
+https://fetch.spec.whatwg.org/#methods
+https://fetch.spec.whatwg.org/#requests
+
+
+
+Changing The HTTP Method
+So the default HTTP method for a Fetch request is the GET method. We can choose a different HTTP method by passing a method property in the configuration object:
+
+fetch(`https://api.unsplash.com/search/photos?page=1&query=${searchedForText}`, {
+    method: 'POST'
+});
+This will send the request with the POST HTTP header.
+
+Fetch's specification does not limit what HTTP methods can be used, although it does recommend that all methods are written in uppercase for consistency with the HTTP Verbs specification.
